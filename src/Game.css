@@ -18,7 +18,7 @@
 .header-text {
     font-size: 30px;
     font-weight: bold;
-    width: 200px;
+    width: 220px;
     margin: 0;
     position: absolute;
     top: 50%;
@@ -33,21 +33,25 @@
     height: 80px;
     width: 300px;
     margin-left: -120px;
+    position: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .footer button {
-    position: relative;
-    left: 50%;
-    top: 15px;
-    margin-left: -125px;
-    width: 250px;
+    margin-left: 5px;
+    margin-top: 15px;
+    width: 140px;
     height: 50px;
     background-color: lightblue;
-    font-size: 30px;
+    font-size: 20px;
     -webkit-box-shadow: 7px 5px 15px 3px rgba(0, 0, 0, 0.9);
     box-shadow: 7px 5px 15px 3px rgba(0, 0, 0, 0.9);
     border: 5px solid chocolate;
     font-weight: bold;
+}
+
+.footer button:hover {
+    color: chocolate;
 }
 
 .gameBoard {

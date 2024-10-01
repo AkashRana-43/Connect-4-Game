@@ -1,7 +1,8 @@
 import React from 'react'
 import {
   GAME_STATE_PLAYING,
-  GAME_STATE_WIN
+  GAME_STATE_WIN,
+  GAME_STATE_DRAW
 } from '../Constants'
 
 const Header = ({gameState, currentPlayer, winPlayer}) => {
@@ -12,6 +13,8 @@ const Header = ({gameState, currentPlayer, winPlayer}) => {
         return <>Player {currentPlayer} Turn</>
       case GAME_STATE_WIN:
         return <>Player {winPlayer} Wins</>
+        case GAME_STATE_DRAW:
+          return <>Game is a Draw!</>
       default:
     }
   }
