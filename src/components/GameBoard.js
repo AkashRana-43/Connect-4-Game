@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import GameCircle from './GameCircle'
 import Header from './Header'
 import Footer from './Footer'
-import { isWinner, isDraw } from '../helper'
+import { isWinner, isDraw, getSuggestMove } from '../helper'
 import '../Game.css'
 import {
     NO_CIRCLES,
@@ -27,12 +27,14 @@ const GameBoard = () => {
 
     const suggestMove = () => {
         console.log('Suggest')
+        circleClicked(getSuggestMove(gameBoard));
     }
 
     const initGame = () => {
         console.log('InitGame');
         setGameBoard(Array(16).fill(NO_PLAYER));
         setCurrentPlayer(PLAYER_1);
+        setGameSate(GAME_STATE_PLAYING);
     }
 
     const initBoard = () => {
@@ -82,7 +84,7 @@ const GameBoard = () => {
             <div className='gameBoard'>
                 {initBoard()}
             </div>
-            <Footer onClickNewGame={initGame} onClickSuggest={suggestMove}/>
+            <Footer onClickNewGame={initGame} onClickSuggest={suggestMove} />
         </>
     )
 }

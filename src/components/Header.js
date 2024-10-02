@@ -16,6 +16,7 @@ const Header = ({gameState, currentPlayer, winPlayer}) => {
         case GAME_STATE_DRAW:
           return <>Game is a Draw!</>
       default:
+        break;
     }
   }
 
